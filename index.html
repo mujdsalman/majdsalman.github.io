@@ -5,24 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majd Salman - AI Data Transformation Consultant</title>
     <style>
-        :root{--navy:#001122;--gold:#FFD700;--blue:#0074D9}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#001122,#001f3f);color:#eee;line-height:1.8;text-align:center}
-        header{padding:100px 20px 70px}
-        .circle{width:240px;height:240px;border:10px solid var(--gold);border-radius:50%;margin:0 auto 30px;overflow:hidden;box-shadow:0 0 80px rgba(255,215,0,0.9);animation:g 3s infinite alternate}
-        @keyframes g{0%{box-shadow:0 0 60px gold}100%{box-shadow:0 0 120px gold}}
-        .circle img{width:100%;height:100%;object-fit:cover}
-        h1{font-size:5.2rem;color:var(--gold);margin:20px 0;text-shadow:0 0 40px gold}
-        h2{color:var(--gold);font-size:2.8rem;margin:70px 0 30px;border-bottom:4px solid var(--gold);padding-bottom:15px;display:inline-block}
-        p{font-size:1.5rem;margin:18px 0}
-        a{color:var(--gold);text-decoration:none;font-weight:bold}
-        .btn{background:var(--gold);color:#001122;padding:22px 70px;margin:60px 15px;border-radius:70px;font-weight:bold;font-size:1.6rem;display:inline-block;box-shadow:0 15px 50px rgba(0,0,0,0.7);transition:0.3s}
-        .btn:hover{transform:translateY(-8px);box-shadow:0 25px 60px rgba(0,0,0,0.8)}
-        .cert{max-width:1000px;margin:80px auto 60px;border:8px solid var(--gold);border-radius:22px;box-shadow:0 0 80px rgba(255,215,0,0.9)}
-        .skills span{background:var(--blue);color:#fff;padding:10px 20px;margin:8px;border-radius:30px;display:inline-block;font-size:1rem}
-        ul{text-align:left;max-width:900px;margin:40px auto;font-size:1.4rem;line-height:2}
-        footer{padding:80px;color:var(--gold);font-size:1.4rem}
-        @media(max-width:768px){h1{font-size:3.5rem}.circle{width:180px;height:180px}}
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+        :root{
+            --navy:#001122;
+            --gold:#FFD700;
+            --blue:#0074D9;
+            --text:#e8e8e8;
+            --text-muted:#a0a0a0;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+            background:linear-gradient(135deg,#001122,#001f3f);
+            color:var(--text);
+            line-height:1.6;
+            text-align:center;
+            font-size:14px;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        header{
+            padding:60px 16px 40px;
+        }
+
+        .circle{
+            width:140px;
+            height:140px;
+            border:3px solid var(--gold);
+            border-radius:50%;
+            margin:0 auto 20px;
+            overflow:hidden;
+            box-shadow:0 0 40px rgba(255,215,0,0.5);
+            animation:g 3s infinite alternate;
+        }
+
+        @keyframes g{
+            0%{box-shadow:0 0 30px rgba(255,215,0,0.4)}
+            100%{box-shadow:0 0 50px rgba(255,215,0,0.6)}
+        }
+
+        .circle img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        h1{
+            font-size:1.8rem;
+            font-weight:600;
+            color:var(--gold);
+            margin:12px 0 8px;
+            letter-spacing:-0.02em;
+        }
+
+        h2{
+            color:var(--gold);
+            font-size:1.1rem;
+            font-weight:600;
+            margin:40px 0 16px;
+            padding-bottom:8px;
+            border-bottom:2px solid var(--gold);
+            display:inline-block;
+            letter-spacing:-0.01em;
+        }
+
+        p{
+            font-size:0.875rem;
+            margin:10px 0;
+            font-weight:300;
+            color:var(--text);
+            line-height:1.6;
+        }
+
+        .contact-info{
+            font-size:0.8rem;
+            margin:16px 0;
+            color:var(--text-muted);
+            line-height:1.7;
+        }
+
+        a{
+            color:var(--gold);
+            text-decoration:none;
+            font-weight:400;
+            transition:opacity 0.2s;
+        }
+
+        a:hover{
+            opacity:0.8;
+        }
+
+        .btn{
+            background:var(--gold);
+            color:#001122;
+            padding:12px 28px;
+            margin:24px 8px;
+            border-radius:6px;
+            font-weight:500;
+            font-size:0.85rem;
+            display:inline-block;
+            box-shadow:0 4px 12px rgba(0,0,0,0.3);
+            transition:all 0.2s ease;
+        }
+
+        .btn:hover{
+            transform:translateY(-2px);
+            box-shadow:0 6px 16px rgba(0,0,0,0.4);
+        }
+
+        .cert{
+            max-width:100%;
+            margin:30px auto 24px;
+            border:2px solid var(--gold);
+            border-radius:8px;
+            box-shadow:0 0 30px rgba(255,215,0,0.3);
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            justify-content:center;
+            margin:16px 0;
+        }
+
+        .skills span{
+            background:var(--blue);
+            color:#fff;
+            padding:6px 14px;
+            border-radius:16px;
+            display:inline-block;
+            font-size:0.75rem;
+            font-weight:400;
+            white-space:nowrap;
+        }
+
+        ul{
+            text-align:left;
+            max-width:900px;
+            margin:20px auto;
+            padding:0 20px;
+            font-size:0.85rem;
+            line-height:1.7;
+            font-weight:300;
+        }
+
+        ul li{
+            margin:10px 0;
+        }
+
+        .content{
+            max-width:1000px;
+            margin:auto;
+            padding:16px;
+        }
+
+        footer{
+            padding:40px 16px;
+            color:var(--text-muted);
+            font-size:0.75rem;
+            font-weight:300;
+        }
+
+        /* Mobile Optimization */
+        @media(max-width:768px){
+            body{font-size:13px}
+            h1{font-size:1.6rem}
+            h2{font-size:1rem;margin:32px 0 12px}
+            .circle{width:120px;height:120px}
+            header{padding:40px 12px 24px}
+            .btn{padding:10px 24px;font-size:0.8rem;margin:20px 4px}
+            .contact-info{font-size:0.75rem}
+            .skills span{font-size:0.7rem;padding:5px 12px}
+            ul{font-size:0.8rem;padding:0 16px}
+            p{font-size:0.85rem}
+            .content{padding:12px}
+        }
+
+        @media(max-width:480px){
+            h1{font-size:1.4rem}
+            h2{font-size:0.95rem}
+            .circle{width:100px;height:100px;border-width:2px}
+            .btn{font-size:0.75rem;padding:9px 20px}
+            .skills span{font-size:0.65rem;padding:4px 10px;gap:6px}
+            ul{font-size:0.75rem}
+        }
+
+        @media(min-width:1200px){
+            body{font-size:15px}
+            h1{font-size:2rem}
+            h2{font-size:1.2rem}
+        }
     </style>
 </head>
 <body>
@@ -33,14 +214,14 @@
     </div>
     <h1>Majd Salman</h1>
     <p>AI Data Transformation Consultant<br>Dubai, United Arab Emirates</p>
-    <p style="font-size:1.7rem;margin:30px 0">
+    <p class="contact-info">
         +971 58 677 2972 • mujdsalman@gmail.com<br>
         <a href="https://www.linkedin.com/in/majd-salman-668097392" target="_blank">linkedin.com/in/majd-salman-668097392</a>
     </p>
     <a href="AI Data Transformation Consultant.pdf" class="btn" download>Download Full CV (PDF)</a>
 </header>
 
-<div style="max-width:1200px;margin:auto;padding:20px">
+<div class="content">
 
     <h2>Professional Summary</h2>
     <p>AI-driven Data Transformation Consultant with 12+ years of experience in banking technology, data analytics, BI reporting, automation, API integrations, and digital transformation. Skilled in Power BI, Python, SQL, and data modeling, with a proven ability to convert legacy banking operations into data-centric, AI-enabled ecosystems.</p>
